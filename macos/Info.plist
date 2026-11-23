@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>CFBundleIdentifier</key><string>io.github.wsxqaza12.return-note</string>
+  <key>CFBundleName</key><string>Return Note</string>
+  <key>CFBundleDisplayName</key><string>回來</string>
+  <key>CFBundleExecutable</key><string>return-note</string>
+  <key>CFBundlePackageType</key><string>APPL</string>
+  <key>CFBundleIconFile</key><string>AppIcon</string>
+  <key>CFBundleDevelopmentRegion</key><string>zh_TW</string>
+  <key>CFBundleShortVersionString</key><string>0.7.1</string>
+  <key>CFBundleVersion</key><string>0.7.1</string>
+  <key>LSMinimumSystemVersion</key><string>13.0</string>
+  <key>LSMultipleInstancesProhibited</key><true/>
+  <key>NSHighResolutionCapable</key><true/>
+  <key>UTExportedTypeDeclarations</key><array><dict>
+    <key>UTTypeIdentifier</key><string>io.github.wsxqaza12.return-note.note-id</string>
+    <key>UTTypeConformsTo</key><array><string>public.data</string></array>
+    <key>UTTypeDescription</key><string>Return Note internal drag item</string>
+  </dict></array>
+</dict></plist>

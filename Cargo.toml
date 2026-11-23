@@ -1,8 +1,8 @@
 [package]
 name = "return-note"
-version = "0.7.0"
+version = "0.7.1"
 edition = "2024"
-description = "A small, local-first Windows sticky note for getting back to work"
+description = "A small, local-first sticky note for getting back to work"
 
 [dependencies]
 serde = { version = "1", features = ["derive"] }

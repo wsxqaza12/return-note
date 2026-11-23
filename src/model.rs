@@ -102,8 +102,25 @@ pub struct Settings {
     pub compact: bool,
     pub ai_enabled: bool,
     pub model: String,
+    #[serde(skip_serializing_if = "AiProvider::is_gemini")]
+    pub ai_provider: AiProvider,
+    #[serde(skip_serializing_if = "is_false")]
+    pub openai_enabled: bool,
+    pub openai_model: String,
     #[serde(skip_serializing_if = "is_false")]
     pub sidebar_collapsed: bool,
+}
+#[derive(Clone, Copy, Debug, Default, PartialEq, Eq, Serialize, Deserialize)]
+#[serde(rename_all = "lowercase")]
+pub enum AiProvider {
+    #[default]
+    Gemini,
+    OpenAi,
+}
+impl AiProvider {
+    fn is_gemini(&self) -> bool {
+        *self == Self::Gemini
+    }
 }
 fn is_false(value: &bool) -> bool {
     !value
@@ -118,6 +135,9 @@ impl Default for Settings {
             compact: true,
             ai_enabled: false,
             model: "gemini-3.1-flash-lite".into(),
+            ai_provider: AiProvider::Gemini,
+            openai_enabled: false,
+            openai_model: "gpt-5-mini".into(),
             sidebar_collapsed: false,
         }
     }
